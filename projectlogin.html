@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+margin: 0px;
+padding: 0x;
+box-sizing: border-box;
+}
+body{
+background: url("https://www.thoughtco.com/thmb/GAtp0KJWAXudEuz9ufGu2jKAdYQ=/3909x2199/smart/filters:no_upscale()/film-photography-592347645-59e4d0609abed500119e7b14.jpg")no-repeat;
+background-size: cover;
+height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+form{
+height: 450px;
+width: 370px;
+flex-direction: column;
+display: flex;
+border-radius: 20px;
+background: rgba(255,255,255,0.20);
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .57);
+border-left: 1px  solid rgba(255, 255, 255, .5);
+border-top: 1px  solid rgba(255, 255, 255, .5);
+}
+h2{
+margin-top: 5px;
+font-size: 50px;
+color: black;
+text-align: center;
+}
+h4{
+margin-top: 5px;
+font-size: 30px;
+color: black;
+}
+input{
+width: 80%;
+margin: 8% auto;
+margin-bottom: 10%;
+background: transparent;
+font-size: 20px;
+border: none;
+outline: none;
+color: black;
+border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+border-radius: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+input:hover
+{
+    background-color: white;
+}
+button{
+    width: 50%;
+    margin: 3% auto;
+    font-size: 18px;
+    opacity: .8;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10PX;
+    box-shadow: 3px 3px 5px rgba(31, 38, 135, 1);
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    margin-top: 7%;
+    cursor: pointer;
+}
+button:hover{
+ background-color: rgba(25, 25, 27, 0.4);
+}
+button:active{
+    opacity: 0.3;
+}
+a{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    opacity: 0.7;
+}
+a:hover{
+    color: white;
+}
+a:active{
+
+    opacity: 0.3;
+    }
+</style>
+<body>
+    <form name="f1">
+        <h2>LOG IN</h2>
+        <h4>Username:</h4>
+       <input type="text" name="username" id="username" placeholder="Username" required>
+       <h4>Password:</h4>
+       <input type="password" name="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+
+    <script>
+        function login()
+        {   
+    var name=document.getElementById("username").value;
+    var pass=document.getElementById("password").value;
+    if(name=="Online" && pass=="Course")
+    {
+        return true;
+    }
+    else if(name!="Online" && pass=="Course")
+    {
+        alert("Enter valid name");
+    }
+    else 
+    {
+        alert("Enter valid password");
+    }
+        }
+    </script>
+    </form>    
+</body>
+</html>

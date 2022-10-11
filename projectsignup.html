@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0px;
+    padding: 0x;
+    box-sizing: border-box;
+    }
+    body{
+    background: url("https://artofvisuals.com/wp-content/uploads/2017/04/jakob-owens-175493.jpg")no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    form{
+    height: 350px;
+    width: 470px;
+    flex-direction: column;
+    display: flex;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.20);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .57);
+    border-left: 1px  solid rgba(255, 255, 255, .5);
+    border-top: 1px  solid rgba(255, 255, 255, .5);
+    }
+    input{
+    width: 80%;
+    margin: 8% auto;
+    margin-bottom: 10%;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+    input:hover
+    {
+        background-color: white;
+    }
+    button{
+    width: 50%;
+    margin: 3% auto;
+    font-size: 18px;
+    opacity: .8;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10PX;
+    box-shadow: 3px 3px 5px rgba(31, 38, 135, 1);
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    margin-top: 7%;
+    cursor: pointer;
+}
+button:hover{
+ background-color: rgba(25, 25, 27, 0.4);
+}
+button:active{
+    opacity: 0.3;
+}
+
+    a{
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 15px;
+        opacity: 0.7;
+    }
+    a:hover{
+        color: white;
+    }
+    a:active{
+    
+        opacity: 0.3;
+        }
+    </style>
+<body>
+    <script>
+        var z=/[(A-Z a-z)]{3,26}$/;
+    var zz=/[(A-Z a-z 0-9)]$/;
+    function my()
+    {
+    var a=document.getElementById("n").value;
+    if(a=="")
+    {
+    alert("Please enter your Name");
+    return false();
+    }
+    else if(!z.test(a))
+    {
+    alert("Please enter the Valid Name");
+    return false();
+    }
+    
+    
+    
+    var b=document.getElementById("f").value;
+    if(b=="")
+    {
+    alert("Please enter your Father's Name");
+    return false();
+    }
+    else if(!z.test(b))
+    {
+    alert("Please enter the Valid Name");
+    return false();
+    }
+    
+    
+    
+    var c=document.getElementById("d").value;
+    if(c=="")
+    {
+    alert("Please enter your D.O.B");
+    return false();
+    }
+    
+    
+    
+    var d=document.getElementById("m").value;
+    var w=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(d=="")
+    {
+    alert("Please enter your Mail ID");
+    return false();
+    }
+    else if(!w.test(d))
+    {
+    alert("Please enter the Valid Mail ID");
+    return false();
+    }
+    
+    var q=document.getElementById("o").value;
+    if(q=="")
+    {
+    alert("Please enter your address");
+    return false();
+    }
+    
+    
+    
+    var f=document.getElementById("c").value;
+    var u=/[(0-9)]{2,12}$/;
+    if(f=="")
+    {
+    alert("Please enter your contact number");
+    return false();
+    }
+    else if(!u.test(f))
+    {
+    alert("Please enter the valid Number");
+    return false();
+    }
+}
+    </script>
+    <form>
+        <center>
+        <fieldset>
+        <table>
+        <caption><center><h1>Registration Form</center></h1></caption>
+        <tr><td><b>NAME:</b></td>
+        <td><input type="text"name="name" value="" id="n" placeholder="Name"><br></td></tr>
+        <tr><td><b>FATHER'S NAME:</b></td>
+        <td><input type="text"name="father's name"value="" id="f" placeholder="Fathername"><br></td></tr>
+        <tr><td><b>D.O.B:</b></td>
+        <td><input type="date"name="date"name="bday" min="1998-01-01" max="2000-12-31" Id="d"><br></td></tr>
+        <tr><td><b>MAIL ID:</b></td>
+        <td><input type="text"name="mail id"value="" id="m" placeholder="Mail id"><br></td></tr>
+        <tr><td><b>ADDRESS:</b></td>
+        <td><textarea type="address"value="" id="o" placeholder="Address"></textarea><br></td></tr>
+        <tr><td><b>CONTACT NO:</b></td>
+        <td><input type="number"name="number"value="" id="c" placeholder="Number"><br></td></tr>
+        <td><input type="submit" onclick="return signup()" value="submit"></td>
+        <td><input type="reset" value="reset"></td></tr>
+    </fieldset>
+    </center>
+    </form>
+    
+</body>
+</html>
